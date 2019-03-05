@@ -44,7 +44,7 @@ Now you have a dynamic page
 ```html
 ...
 <div class="greeting"><% bundle.get("purchase.confirm") %></div>
-<input type="button" value="<% bundle.get("purchase.confirm") %>" onClick="confirm()">
+<input type="button" value="<% bundle.get("purchase.ok") %>" onClick="confirm()">
 <input type="button" value="<% bundle.get("purchase.cancel") %>" onClick="cancel()">
 ...
 ```

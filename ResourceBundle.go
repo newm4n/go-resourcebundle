@@ -13,7 +13,71 @@ import (
 
 var (
 	duplicateBundle = errors.New("bundle with the same language and local code already exist")
+	Languages       = []Language{
+		{"Amharic", "am", "AM"},
+		{"Arabic", "ar", "AR"},
+		{"Basque", "eu", "EU"},
+		{"Bengali", "bn", "BN"},
+		{"English (UK)", "en", "GB"},
+		{"Portuguese (Brazil)", "pt", "BR"},
+		{"Bulgarian", "bg", "BG"},
+		{"Catalan", "ca", "CA"},
+		{"Cherokee", "chr", "CHR"},
+		{"Croatian", "hr", "HR"},
+		{"Czech", "cs", "CS"},
+		{"Danish", "da", "DA"},
+		{"Dutch", "nl", "NL"},
+		{"English (US)", "en", "EN"},
+		{"Estonian", "et", "ET"},
+		{"Filipino", "fil", "FIL"},
+		{"Finnish", "fi", "FI"},
+		{"French", "fr", "FR"},
+		{"German", "de", "DE"},
+		{"Greek", "el", "EL"},
+		{"Gujarati", "gu", "GU"},
+		{"Hebrew", "iw", "IW"},
+		{"Hindi", "hi", "HI"},
+		{"Hungarian", "hu", "HU"},
+		{"Icelandic", "is", "IS"},
+		{"Indonesian", "id", "ID"},
+		{"Italian", "it", "IT"},
+		{"Japanese", "ja", "JA"},
+		{"Kannada", "kn", "KN"},
+		{"Korean", "ko", "KO"},
+		{"Latvian", "lv", "LV"},
+		{"Lithuanian", "lt", "LT"},
+		{"Malay", "ms", "MS"},
+		{"Malayalam", "ml", "ML"},
+		{"Marathi", "mr", "MR"},
+		{"Norwegian", "no", "NO"},
+		{"Polish", "pl", "PL"},
+		{"Portuguese (Portugal)", "pt", "PT"},
+		{"Romanian", "ro", "RO"},
+		{"Russian", "ru", "RU"},
+		{"Serbian", "sr", "SR"},
+		{"Chinese (PRC)", "zh", "CN"},
+		{"Slovak", "sk", "SK"},
+		{"Slovenian", "sl", "SL"},
+		{"Spanish", "es", "ES"},
+		{"Swahili", "sw", "SW"},
+		{"Swedish", "sv", "SV"},
+		{"Tamil", "ta", "TA"},
+		{"Telugu", "te", "TE"},
+		{"Thai", "th", "TH"},
+		{"Chinese (Taiwan)", "zh", "TW"},
+		{"Turkish", "tr", "TR"},
+		{"Urdu", "ur", "UR"},
+		{"Ukrainian", "uk", "UK"},
+		{"Vietnamese", "vi", "VI"},
+		{"Welsh", "cy", "CY"},
+	}
 )
+
+type Language struct {
+	Name         string
+	LanguageCode string
+	LocalCode    string
+}
 
 // Bundle represent one resource bundle, belong to one language and local code
 type Bundle struct {
